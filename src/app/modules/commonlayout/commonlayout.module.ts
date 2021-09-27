@@ -5,6 +5,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { CommonlayoutComponent } from './commonlayout/commonlayout.component';
 import { CommonlayoutRoutes } from './commonlayout.routing';
+import { AdminModule } from '../admin/admin.module';
 
 
 
@@ -12,7 +13,8 @@ import { CommonlayoutRoutes } from './commonlayout.routing';
   declarations: [ CommonlayoutComponent,HeaderComponent, FooterComponent, SidebarComponent],
   imports: [
     CommonModule,
-    CommonlayoutRoutes
+    CommonlayoutRoutes,
+    AdminModule
   ],
   exports: [CommonlayoutComponent]
 })

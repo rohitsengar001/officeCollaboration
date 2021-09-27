@@ -1,7 +1,22 @@
 import { Routes, RouterModule } from '@angular/router';
-import {CommonlayoutComponent} from './commonlayout/commonlayout.component';
+import { AuthGuard } from 'src/app/guards/auth.guard';
+// import { AdminHomeComponent } from '../admin/admin-home/admin-home.component';
+import { CommonlayoutComponent } from './commonlayout/commonlayout.component';
+//account/layout/common
 const routes: Routes = [
-  { path: '', component: CommonlayoutComponent},
+  { path: '', redirectTo: 'common', pathMatch:'full'},
+  { path: 'common', component: CommonlayoutComponent,
+    children: [
+      
+      { path: '',redirectTo:'dashboard', pathMatch:'full'},
+      { path: 'dashboard', loadChildren: () => import('../admin/admin.module').then(m => m.AdminModule) }
+    ]
+  },
+
+  // {}
+
+
+
 ];
 
 export const CommonlayoutRoutes = RouterModule.forChild(routes);

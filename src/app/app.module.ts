@@ -4,6 +4,10 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommonlayoutModule } from './modules/commonlayout/commonlayout.module';
+import { AccountModule } from './modules/account/account.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AdminModule } from './modules/admin/admin.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,6 +17,10 @@ import { CommonlayoutModule } from './modules/commonlayout/commonlayout.module';
     BrowserModule,
     AppRoutingModule,
     CommonlayoutModule,
+    AccountModule,
+    NgbModule,
+    AdminModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
