@@ -27,11 +27,10 @@
                     <div class="card">
                         <div class="card-header">Register</div>
                         <div class="row border rounded-lg">
-                            <div class="col col-md-8 mx-auto bg-gradient-info">
-                                <select class="custom-select">
-                                    <option selected>Select any one Role</option>
-                                    <option value="1">Admin</option>
-                                    <option value="2">Employee</option>
+                            <div class="col col-md-8 mx-auto bg-gradient-info" >
+                                <select class="custom-select" id="role" [(ngModel)]="selectRole">
+                                    <option *ngFor="let opt of role" [value]="opt">{{ opt }}</option>
+                                    
                                 </select>
                             </div>
                         </div>
