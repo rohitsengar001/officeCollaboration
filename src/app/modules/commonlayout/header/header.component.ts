@@ -6,12 +6,25 @@ import { LoginLogoutService } from 'src/app/services/login-logout.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  admin: any
+  constructor(private loginservice: LoginLogoutService) {
 
-  constructor(private loginservice: LoginLogoutService) { }
+  }
 
   ngOnInit(): void {
+    this.setAdmin();
   }
-  logout(){
+  
+  ngDoCheck(): void {
+    this.setAdmin()
+  }
+  logout() {
     this.loginservice.logOutUser()
   }
+
+  setAdmin() {
+    this.admin = this.loginservice.currentUser
+    console.log(this.admin.name);
+  }
+  
 }

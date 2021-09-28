@@ -36,7 +36,7 @@ export class LoginlogoutComponent implements OnInit {
   onSubmit() {
     console.log(this.selectRole);
     // console.log(this.loginReactiveForm);
-    
+
     this.result = this.loginservice.checkUser(this.loginReactiveForm,this.selectRole);
     if (this.result == true) {
       this.router.navigate(['../account/layout']);
