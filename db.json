@@ -13,138 +13,27 @@
       "postId": 1
     }
   ],
-  "bill": [
+  "admin": [
     {
-      "customerName": "naman gutpa",
-      "billNo": "",
-      "date": "2021-01-11",
-      "address": "mirzapur",
-      "itemDetails": [
-        {
-          "itemName": "SAHI PANEER",
-          "quantity": 1,
-          "price": 240
-        },
-        {
-          "itemName": "MATAR PANEER",
-          "price": 234,
-          "quantity": 1
-        }
-      ],
-      "grandTotal": 474,
-      "id": 2
+      "name": "Rohit sengar",
+      "username": "rohitsengar001@gmail.com",
+      "password": "rohit@321"
     },
     {
-      "customerName": "bhanu pratap sengar",
-      "billNo": "",
-      "date": "2021-01-07",
-      "address": "kaurara road",
-      "itemDetails": [
-        {
-          "itemName": "SAHI PANEER",
-          "quantity": 1,
-          "price": 240
-        },
-        {
-          "itemName": "VEG-VIRYANI",
-          "quantity": 2,
-          "price": 45
-        }
-      ],
-      "grandTotal": 330,
-      "id": 3
-    },
-    {
-      "customerName": "rajesh khanna",
-      "billNo": "",
-      "date": "2021-01-08",
-      "address": "mumbai",
-      "itemDetails": [
-        {
-          "itemName": "BUTTER NAAN",
-          "quantity": 4,
-          "price": 15
-        },
-        {
-          "itemName": "SAHI PANEER",
-          "quantity": 1,
-          "price": 265
-        }
-      ],
-      "grandTotal": 325,
-      "id": 4
-    },
-    {
-      "customerName": "akash gaur",
-      "billNo": "",
-      "date": "2021-01-09",
-      "address": "bulandshahr",
-      "itemDetails": [
-        {
-          "itemName": "MATAR KULCHA",
-          "quantity": 1,
-          "price": 45
-        }
-      ],
-      "grandTotal": 45,
-      "id": 5
-    },
-    {
-      "customerName": "rahul sengar",
-      "billNo": "",
-      "date": "2021-01-10",
-      "address": "kaurara road",
-      "itemDetails": [
-        {
-          "itemName": "VEG-VIRYANI",
-          "quantity": 2,
-          "price": 90
-        }
-      ],
-      "grandTotal": 180,
-      "id": 6
-    },
-    {
-      "customerName": "naresh chandra ",
-      "billNo": "",
-      "date": "2021-01-13",
-      "address": "ghaziabad",
-      "itemDetails": [
-        {
-          "itemName": "MATAR PANEER",
-          "quantity": 2,
-          "price": 234
-        },
-        {
-          "itemName": "VEG MAGGI",
-          "quantity": 1,
-          "price": 90
-        }
-      ],
-      "grandTotal": 558,
-      "id": 7
+      "name": "Rahul sengar",
+      "username": "rahulsengar001@gmail.com",
+      "password": "rohit@321"
     }
   ],
-  "todo": [
+  "bands":[
     {
-      "content": "sdasdsd",
-      "status": "",
-      "id": 1
-    },
-    {
-      "content": "dadadad",
-      "status": "strike",
-      "id": 3
-    },
-    {
-      "content": "asdadasdad",
-      "status": "",
-      "id": 4
-    },
-    {
-      "content": "demo",
-      "status": "",
-      "id": 5
+      "band7":["CEO"],
+      "band6":["CTO"],
+      "band5":["Vice President"],
+      "band4":["Engineering Director"],
+      "band3":["Engineering Manager"],
+      "band2":["Lead Engineer","QA","IT Consultant","Finance Consultant",""],
+      "band1":["Software Engineer","QA","IT Consultant","Finance Consultant",""]
     }
   ],
   "profile": {
