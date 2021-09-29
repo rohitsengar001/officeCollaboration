@@ -27,7 +27,7 @@ There're two modules here
 [1]Admin Module
 [2]Employee Module
 
-## unctions of Admin
+## Functions of Admin
 Add an employee
 Initialize basic employee details as follows:
 Name
@@ -63,9 +63,9 @@ Delete record of an employee
 ![image](https://user-images.githubusercontent.com/39033056/135325137-6d9634e9-6492-4351-9dae-d07739922a9b.png)
 ![image](https://user-images.githubusercontent.com/39033056/135325503-e2bd18d2-976f-4edd-b28f-29b9e8e6a468.png)
 
-##admin profile
+## admin profile
 ![image](https://user-images.githubusercontent.com/39033056/135325580-8f223af2-0363-40d9-a698-038fec1d84f8.png)
-##Message center
+## Message center
 ![image](https://user-images.githubusercontent.com/39033056/135325677-12999516-52ad-469e-950b-4becf287866d.png)
 
 ## Manage Employee
