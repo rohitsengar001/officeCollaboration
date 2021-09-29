@@ -18,4 +18,7 @@ export class EmployeeService {
   getEmployee(){
     return this.http.get(`${environment.baseUrl}/employee/`)
   }
+  deleteEmployee(dataId){
+    return this.http.delete(`${environment.baseUrl}/employee/`+dataId)
+  }
 }

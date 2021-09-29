@@ -77,16 +77,6 @@
   ],
   "employee": [
     {
-      "name": "rohit",
-      "email": "rohitsengar001@gmail.com",
-      "password": "dasdasd23",
-      "designation": "software engineering",
-      "band": "Band1",
-      "reporting_manager": "naresh chandra",
-      "allocate_project": "blogging platform",
-      "id": 1
-    },
-    {
       "name": "Rahul sengar",
       "email": "rahulengar001@gmail.com",
       "password": "rohit@321",
