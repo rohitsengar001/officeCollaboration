@@ -9,9 +9,9 @@
         </tr>
     </thead>
     <tbody *ngFor="let record of empRecords;index as i">
-        <tr >
+        <tr>
             <th scope="row">{{record.id}}</th>
-            <td>{{i}}</td>
+            <td>{{i+1}}</td>
             <td>{{record.name}}</td>
             <td>{{record.email}}</td>
             <td>
@@ -19,11 +19,11 @@
                     [attr.data-target]="'#viewmore-' + i"></i>
                 <a href=""><i class="fas fa-edit fa-2x  btn btn-warning mx-2" data-toggle="modal"
                         [attr.data-target]="'#exampleModal-' + i"></i>
-                </a> 
+                </a>
                 <a href=""><i class="fas fa-trash-alt fa-2x btn btn-danger " data-toggle="modal"
                         [attr.data-target]="'#deleteModal-' + i"></i></a>
             </td>
-            
+
         </tr>
         <!-- Modal -->
         <div class="modal fade " id="viewmore-{{i}}" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -31,17 +31,53 @@
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Employee Details:</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        ...
+                        <!--! model body -->
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control"  placeholder="Enter_Employee Name" disabled value="{{record.name}}">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Reporting Manager</label>
+                                    <input type="text" class="form-control" value="{{record.reporting_manager}}"  disabled>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Email</label>
+                                    <input type="email" class="form-control" id="inputEmail4 " value="{{record.email}}" disabled>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputPassword4">Password</label>
+                                    <input type="password" class="form-control" id="inputPassword4 " value="{{record.password}}" disabled>
+                                </div>
+                            </div>
+                            <div class="form-row">
+
+                                <div class="form-group col-md-4">
+                                    <label for="inputDesignation">Designation</label>
+                                    <input type="text" class="form-control" id="inputDesignation" placeholder="Enter Designation" value="{{record.designation}}" disabled>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputBand">Band</label>
+                                    <input type="text" class="form-control" id="inputBand"
+                                        placeholder="Apartment, studio, or floor " value="{{record.band}}" disabled>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputAllocatedProject">Allocated Project</label>
+                                    <input type="text" class="form-control" id="inputAllocatedProject" placeholder="Enter Allocated Project " value="{{record.allocate_project}}" disabled>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        
                     </div>
                 </div>
             </div>
