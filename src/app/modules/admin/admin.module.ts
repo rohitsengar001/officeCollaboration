@@ -5,6 +5,7 @@ import { TodoAppModule } from '../todo-app/todo-app.module';
 import { AdminRoutes } from './admin.routing';
 import { AdminProfileComponent } from './admin-profile/admin-profile.component';
 import { AddempComponent } from './addemp/addemp.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -12,8 +13,10 @@ import { AddempComponent } from './addemp/addemp.component';
   declarations: [AdminHomeComponent, AdminProfileComponent, AddempComponent],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     TodoAppModule,
-    AdminRoutes
+    AdminRoutes,
   ],
   exports: [AdminHomeComponent]
 })

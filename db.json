@@ -25,15 +25,92 @@
       "password": "rohit@321"
     }
   ],
-  "bands":[
+  "bands": [
     {
-      "band7":["CEO"],
-      "band6":["CTO"],
-      "band5":["Vice President"],
-      "band4":["Engineering Director"],
-      "band3":["Engineering Manager"],
-      "band2":["Lead Engineer","QA","IT Consultant","Finance Consultant",""],
-      "band1":["Software Engineer","QA","IT Consultant","Finance Consultant",""]
+      "band7": [
+        "CEO"
+      ],
+      "band6": [
+        "CTO"
+      ],
+      "band5": [
+        "Vice President"
+      ],
+      "band4": [
+        "Engineering Director"
+      ],
+      "band3": [
+        "Engineering Manager"
+      ],
+      "band2": [
+        "Lead Engineer",
+        "QA",
+        "IT Consultant",
+        "Finance Consultant",
+        ""
+      ],
+      "band1": [
+        "Software Engineer",
+        "QA",
+        "IT Consultant",
+        "Finance Consultant",
+        ""
+      ]
+    }
+  ],
+  "employee": [
+    {
+      "name": "rohit",
+      "email": "rohitsengar001@gmail.com",
+      "password": "dasdasd23",
+      "designation": "software engineering",
+      "band": "Band1",
+      "reporting_manager": "naresh chandra",
+      "allocate_project": "blogging platform",
+      "id": 1
+    },
+    {
+      "name": "Rahul sengar",
+      "email": "rahulengar001@gmail.com",
+      "password": "rohit@321",
+      "designation": "cto",
+      "band": "Band6",
+      "reporting_manager": "ceo",
+      "allocate_project": "gamming",
+      "id": 2
+    },
+    {
+      "name": "Rajesh Sharma",
+      "email": "rajeshsharma001@gmail.com",
+      "password": "rohit@321",
+      "designation": "engineer",
+      "band": "Band3",
+      "reporting_manager": "amit kumar",
+      "allocate_project": "github ",
+      "id": 3
+    },
+    {
+      "name": "AKASH GAUR",
+      "email": "AKASHGAUR6400@gmail.com",
+      "password": "rohit@321",
+      "designation": "SOFTWARE DEVELOPER",
+      "band": "Band3",
+      "reporting_manager": "ROHIT SENGAR",
+      "allocate_project": "ANGULAR DESIGNING",
+      "id": 4
+    },
+    {
+      "name": "Bhanu Sengar",
+      "email": "rohitsengar001@gmail.com",
+      "password": "rohit@321",
+      "designation": "software Engineer",
+      "band": [
+        "Band2",
+        "Band3"
+      ],
+      "reporting_manager": "Rohit sengar",
+      "allocate_project": "angular",
+      "id": 5
     }
   ],
   "profile": {

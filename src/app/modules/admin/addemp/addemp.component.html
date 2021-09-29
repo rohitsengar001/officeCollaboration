@@ -1,1 +1,85 @@
-<p>addemp works!</p>
+<div class="container">
+
+    <div class="card text-center">
+        <div class="card-header">
+            New Employee Registration Form
+        </div>
+        <form [formGroup]="employeeForm">
+            <div>
+                <div class="col-md-10">
+                    <!-- name -->
+                    <input class="form-control  my-2" type="text" placeholder="Enter Name"
+                        aria-label=".form-control-lg example" formControlName="name">
+                    <!-- !validation name -->
+                    <small class="text-danger"
+                        *ngIf="!this.employeeForm.get('name').valid && (this.employeeForm.get('name').touched )">
+                        Name is empty!!
+                    </small>
+                    <input class="form-control  my-2" type="text" placeholder="Enter Email"
+                        aria-label=".form-control-lg example" formControlName="email">
+                    <!-- !validation email -->
+                    <small class="text-danger"
+                        *ngIf="!this.employeeForm.get('email').valid && (this.employeeForm.get('email').touched )">email
+                        id is incorrect!
+                    </small>
+
+                    <input class="form-control  my-2" type="password" placeholder="Enter Password"
+                        aria-label=".form-control-lg example" formControlName="password">
+                    <!-- !validation passoword -->
+                    <small class="text-danger"
+                        *ngIf="!this.employeeForm.get('password').valid && (this.employeeForm.get('password').touched )">password
+                        is empty!!,minlength should be 8 characters
+                    </small>
+
+
+                    <select class="custom-select" formControlName="band" (change)="getSelectedBand()">
+                        <option selected>Enter One Band</option>
+                        <option *ngFor="let band of bands">{{band}}</option>
+                    </select>
+
+
+                    <!-- !validation band -->
+                    <small class="text-danger"
+                        *ngIf="!this.employeeForm.get('band').valid && (this.employeeForm.get('band').touched )">band is
+                        empty!!
+                    </small>
+                    <!-- designation -->
+                    <select class="custom-select my-2" formControlName="designation" multiple>
+                        <option selected>Select Designation</option>
+                        <!-- <option selected>{{selectedBand}}</option> -->
+                        <ng-container *ngIf="selectedBand">
+                            <option *ngFor="let des of empdesArray">{{des}}</option>
+                            <!-- <option *ngFor="let designation of group.selectedBand">{{designation}}</option> -->
+                        </ng-container>
+
+                    </select>
+                    <!-- !validation designation -->
+                    <small class="text-danger"
+                        *ngIf="!this.employeeForm.get('designation').valid && (this.employeeForm.get('designation').touched )">designation
+                        is empty!!
+                    </small>
+
+                    <input class="form-control  my-2" type="text" placeholder="Enter Reporting Manager"
+                        aria-label=".form-control-lg example" formControlName="reporting_manager">
+                    <!-- !validation reporting manager -->
+                    <small class="text-danger"
+                        *ngIf="!this.employeeForm.get('reporting_manager').valid && (this.employeeForm.get('reporting_manager').touched )">reporting_manager
+                        is empty!
+                    </small>
+                    <input class="form-control  my-2" type="text" placeholder="Enter Allocated Project"
+                        aria-label=".form-control-lg example" formControlName="allocate_project">
+                    <!-- validation allocate project -->
+                    <small class="text-danger"
+                        *ngIf="!this.employeeForm.get('allocate_project').valid && (this.employeeForm.get('allocate_project').touched )">allocate_project
+                        is empty!
+                    </small>
+                </div>
+            </div>
+        </form>
+        <input type="button" class="btn btn-primary" (click)="onsubmit()"
+            [disabled]="!(this.employeeForm.valid && this.employeeForm.dirty)" value="submit">
+    </div>
+    <div class="alert alert-success" role="alert" *ngIf="successFlag">
+        A simple success alert—check it out!
+    </div>
+</div>
