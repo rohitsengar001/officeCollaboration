@@ -70,6 +70,17 @@ Delete record of an employee
 
 ## Manage Employee
 ![image](https://user-images.githubusercontent.com/39033056/135325780-d608003e-97d0-4c81-8701-5723e54adcd1.png)
+ Operations:
+[1] View Employees Details ![image](https://user-images.githubusercontent.com/39033056/135356309-38435166-d105-428a-b8e7-b4bede562496.png)
+ -----------------------------
+ ![image](https://user-images.githubusercontent.com/39033056/135356363-6d202967-b1cd-4114-98a1-45a9ba999a6d.png)
+[2] Update Employee Details![image](https://user-images.githubusercontent.com/39033056/135356447-83228e4d-b1ee-449c-b664-2aa32b8a10bc.png)
+        
+      ![image](https://user-images.githubusercontent.com/39033056/135356524-10820ecd-5ec8-473b-b54a-b03dc7668b53.png)
+[3]Delete Employee Details ![image](https://user-images.githubusercontent.com/39033056/135356588-caadabbc-2e69-40e8-9bc7-afe5abc136b0.png)
+        ![image](https://user-images.githubusercontent.com/39033056/135356629-89e9010f-279a-4121-b7b4-32b614dbf4b8.png)
+
+ 
 
 
 
