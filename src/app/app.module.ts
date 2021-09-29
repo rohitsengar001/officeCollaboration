@@ -9,14 +9,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // import { AdminModule } from './modules/admin/admin.module';
 import { HttpClientModule } from '@angular/common/http';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { UpdateEmpComponent } from './modules/update-emp/update-emp.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PagenotfoundComponent,
-    UpdateEmpComponent
   ],
   imports: [
     BrowserModule,

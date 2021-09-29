@@ -6,11 +6,12 @@ import { AdminRoutes } from './admin.routing';
 import { AdminProfileComponent } from './admin-profile/admin-profile.component';
 import { AddempComponent } from './addemp/addemp.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UpdateEmpComponent } from './update-emp/update-emp.component';
 
 
 
 @NgModule({
-  declarations: [AdminHomeComponent, AdminProfileComponent, AddempComponent],
+  declarations: [AdminHomeComponent, AdminProfileComponent, AddempComponent, UpdateEmpComponent],
   imports: [
     CommonModule,
     FormsModule,
