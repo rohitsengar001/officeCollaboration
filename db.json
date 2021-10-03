@@ -77,6 +77,15 @@
   ],
   "employee": [
     {
+      "name": "RAJESH SHARMA",
+      "email": "rohitsengar001@gmail.com",
+      "password": "rohit@321",
+      "designation": [
+        "Software Engineer"
+      ],
+      "band": "band1",
+      "reporting_manager": "ROHIT SENGAR",
+      "allocate_project": "ANGULAR",
       "id": 1
     }
   ],

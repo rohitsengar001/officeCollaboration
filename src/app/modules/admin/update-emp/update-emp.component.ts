@@ -55,14 +55,15 @@ export class UpdateEmpComponent implements OnInit {
       this.empData.designation=data.value.emp_designation;
       // console.log(data.value.emp_designation);
       console.log(this.empData);
+      this.empService.putEmployee(this.empData, id).subscribe(() => {
+        console.log("updated successfully");
+        console.log(this.empData);
+        this.getEmployeeData()
+      })
     })
 
     // update record 
-    this.empService.putEmployee(this.empData, id).subscribe(() => {
-      console.log("updated successfully");
-      console.log(this.empData);
-      this.getEmployeeData()
-    })
+    
 
     // console.log(data.value);
 
