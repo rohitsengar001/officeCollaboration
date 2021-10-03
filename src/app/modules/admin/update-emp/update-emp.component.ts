@@ -1,6 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { EmployeeService } from 'src/app/services/employee.service';
+interface Employee {
+  name: string;
+  email: string;
+  password: string;
+  designation: [];
+  band: string;
+  reporting_manager: string;
+  allocate_project: string;
+  id: number;
+}
 
 @Component({
   selector: 'app-update-emp',
@@ -11,6 +21,7 @@ export class UpdateEmpComponent implements OnInit {
   empRecords
   updateForm: FormGroup
   flagMessage: boolean
+  empData // put single object of employee
   constructor(private empService: EmployeeService) { }
 
   ngOnInit(): void {
@@ -32,6 +43,29 @@ export class UpdateEmpComponent implements OnInit {
       this.empRecords = info;
       console.log(this.empRecords);
     })
+  }
+
+  updateEmpData(data, id) {
+    //get single record according his id number
+    this.empService.getSingleEmployee(id).subscribe(info => {
+      this.empData=info
+      this.empData.reporting_manager=data.value.emp_reporting_manager;
+      this.empData.band =data.value.emp_band;
+      this.empData.allocate_project=data.value.emp_allocate_project;
+      this.empData.designation=data.value.emp_designation;
+      // console.log(data.value.emp_designation);
+      console.log(this.empData);
+    })
+
+    // update record 
+    this.empService.putEmployee(this.empData, id).subscribe(() => {
+      console.log("updated successfully");
+      console.log(this.empData);
+      this.getEmployeeData()
+    })
+
+    // console.log(data.value);
+
   }
 
   deleteEmpData(index, id) {

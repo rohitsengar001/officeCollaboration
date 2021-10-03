@@ -77,47 +77,7 @@
   ],
   "employee": [
     {
-      "name": "Rahul sengar",
-      "email": "rahulengar001@gmail.com",
-      "password": "rohit@321",
-      "designation": "cto",
-      "band": "Band6",
-      "reporting_manager": "ceo",
-      "allocate_project": "gamming",
-      "id": 2
-    },
-    {
-      "name": "Rajesh Sharma",
-      "email": "rajeshsharma001@gmail.com",
-      "password": "rohit@321",
-      "designation": "engineer",
-      "band": "Band3",
-      "reporting_manager": "amit kumar",
-      "allocate_project": "github ",
-      "id": 3
-    },
-    {
-      "name": "AKASH GAUR",
-      "email": "AKASHGAUR6400@gmail.com",
-      "password": "rohit@321",
-      "designation": "SOFTWARE DEVELOPER",
-      "band": "Band3",
-      "reporting_manager": "ROHIT SENGAR",
-      "allocate_project": "ANGULAR DESIGNING",
-      "id": 4
-    },
-    {
-      "name": "Bhanu Sengar",
-      "email": "rohitsengar001@gmail.com",
-      "password": "rohit@321",
-      "designation": "software Engineer",
-      "band": [
-        "Band2",
-        "Band3"
-      ],
-      "reporting_manager": "Rohit sengar",
-      "allocate_project": "angular",
-      "id": 5
+      "id": 1
     }
   ],
   "profile": {

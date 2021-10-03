@@ -9,6 +9,9 @@ export class EmployeeService {
 
   constructor(private http: HttpClient) {
   }
+  getSingleEmployee(id){
+    return this.http.get(`${environment.baseUrl}/employee/`+id)
+  }
   postEmployee(data){
     return this.http.post<any>(`${environment.baseUrl}/employee`,data);
   }

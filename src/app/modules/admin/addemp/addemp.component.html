@@ -16,7 +16,7 @@
                         Name is empty!!
                     </small>
                     <input class="form-control  my-2" type="text" placeholder="Enter Email"
-                        aria-label=".form-control-lg example" formControlName="email">
+                        aria-label=".form-control-lg example" formControlName="email" autocomplete="false">
                     <!-- !validation email -->
                     <small class="text-danger"
                         *ngIf="!this.employeeForm.get('email').valid && (this.employeeForm.get('email').touched )">email
@@ -24,7 +24,7 @@
                     </small>
 
                     <input class="form-control  my-2" type="password" placeholder="Enter Password"
-                        aria-label=".form-control-lg example" formControlName="password">
+                        aria-label=".form-control-lg example" formControlName="password" autocomplete="false">
                     <!-- !validation passoword -->
                     <small class="text-danger"
                         *ngIf="!this.employeeForm.get('password').valid && (this.employeeForm.get('password').touched )">password

@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
 
   setAdmin() {
     this.admin = this.loginservice.currentUser
-    console.log(this.admin.name);
+    
   }
   
 }

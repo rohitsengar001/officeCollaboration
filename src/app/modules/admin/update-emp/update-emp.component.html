@@ -15,15 +15,17 @@
             <td>{{record.name}}</td>
             <td>{{record.email}}</td>
             <td>
-                <!-- view button -->
-                <i class="far fa-eye  btn btn-primary my-1 mx-1 btn fa-3x" data-toggle="modal"
-                    [attr.data-target]="'#viewmore-' + i"></i>
-                <!-- edit button -->
-                <i class="fas fa-edit fa-2x  btn btn-warning mx-2" data-toggle="modal"
-                    [attr.data-target]="'#update-' + i"></i>
-                <!-- delete button -->
-                <i class="fas fa-trash-alt fa-2x btn btn-danger " data-toggle="modal"
-                    [attr.data-target]="'#delete-' + i"></i>
+                <div class="text-center">
+                    <!-- view button -->
+                    <i class="far fa-eye  btn btn-primary my-1 mx-1 btn fa-3x" data-toggle="modal"
+                        [attr.data-target]="'#viewmore-' + i"></i>
+                    <!-- edit button -->
+                    <i class="fas fa-edit fa-2x  btn btn-warning mx-2" data-toggle="modal"
+                        [attr.data-target]="'#update-' + i"></i>
+                    <!-- delete button -->
+                    <i class="fas fa-trash-alt fa-2x btn btn-danger " data-toggle="modal"
+                        [attr.data-target]="'#delete-' + i"></i>
+                </div>
             </td>
 
         </tr>
@@ -33,7 +35,7 @@
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Employee Details:</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Employee View Details</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -54,32 +56,29 @@
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputEmail4">Email</label>
-                                    <input type="email" class="form-control" id="inputEmail4 " value="{{record.email}}"
-                                        disabled>
+                                    <input type="email" class="form-control" value="{{record.email}}" disabled>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputPassword4">Password</label>
-                                    <input type="password" class="form-control" id="inputPassword4 "
-                                        value="{{record.password}}" disabled>
+                                    <input type="password" class="form-control" value="{{record.password}}" disabled>
                                 </div>
                             </div>
                             <div class="form-row">
 
                                 <div class="form-group col-md-4">
                                     <label for="inputDesignation">Designation</label>
-                                    <input type="text" class="form-control" id="inputDesignation"
-                                        placeholder="Enter Designation" value="{{record.designation}}" disabled>
+                                    <input type="text" class="form-control" placeholder="Enter Designation"
+                                        value="{{record.designation}}" disabled>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="inputBand">Band</label>
-                                    <input type="text" class="form-control" id="inputBand"
-                                        placeholder="Apartment, studio, or floor " value="{{record.band}}" disabled>
+                                    <input type="text" class="form-control" placeholder="Apartment, studio, or floor "
+                                        value="{{record.band}}" disabled>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="inputAllocatedProject">Allocated Project</label>
-                                    <input type="text" class="form-control" id="inputAllocatedProject"
-                                        placeholder="Enter Allocated Project " value="{{record.allocate_project}}"
-                                        disabled>
+                                    <input type="text" class="form-control" placeholder="Enter Allocated Project "
+                                        value="{{record.allocate_project}}" disabled>
                                 </div>
                             </div>
                         </form>
@@ -96,56 +95,57 @@
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Employee Details:</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Employee Update Details</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
                         <!--! model body -->
-                        <form [formGroup]="updateForm">
+                        <form #updateForm='ngForm'>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="name">Name</label>
                                     <input type="text" class="form-control" placeholder="Enter_Employee Name" disabled
-                                        value="{{record.name}} ">
+                                        [(ngModel)]="record.name" ngModel name="emp_name">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputEmail4">Reporting Manager</label>
-                                    <input type="text" class="form-control" value="{{record.reporting_manager}} ">
+                                    <input type="text" class="form-control" [(ngModel)]="record.reporting_manager "
+                                        ngModel name="emp_reporting_manager">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputEmail4">Email</label>
-                                    <input type="email" class="form-control" id="inputEmail4 " value="{{record.email}}"
-                                        disabled>
+                                    <input type="email" class="form-control" id="" [(ngModel)]="record.email" disabled
+                                        ngModel name="emp_email">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputPassword4">Password</label>
-                                    <input type="password" class="form-control" id="inputPassword4 "
-                                        value="{{record.password}}" disabled>
+                                    <input type="password" class="form-control" [(ngModel)]="record.password" disabled
+                                        ngModel name="emp_password">
                                 </div>
                             </div>
                             <div class="form-row">
 
                                 <div class="form-group col-md-4">
                                     <label for="inputDesignation">Designation</label>
-                                    <input type="text" class="form-control" id="inputDesignation"
-                                        placeholder="Enter Designation" value="{{record.designation}}">
+                                    <input type="text" class="form-control" placeholder="Enter Designation"
+                                        [(ngModel)]="record.designation" ngModel name="emp_designation" placeholder="">
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="inputBand">Band</label>
-                                    <input type="text" class="form-control" id="inputBand"
-                                        placeholder="Apartment, studio, or floor " value="{{record.band}}">
+                                    <input type="text" class="form-control" placeholder="Apartment, studio, or floor "
+                                        [(ngModel)]="record.band" ngModel name="emp_band">
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="inputAllocatedProject">Allocated Project</label>
-                                    <input type="text" class="form-control" id="inputAllocatedProject"
-                                        placeholder="Enter Allocated Project " value="{{record.allocate_project}}">
+                                    <input type="text" class="form-control" placeholder="Enter Allocated Project "
+                                        [(ngModel)]="record.allocate_project" name="emp_allocate_project" ngModel>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <input class="form-check-input" type="checkbox">
                                     <label class="form-check-label" for="gridCheck">
                                         Check me out
                                     </label>
@@ -155,7 +155,8 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-success" data-dismiss="modal">Save Changes</button>
+                        <button type="button" class="btn btn-success" data-dismiss="modal"
+                            (click)="updateEmpData(updateForm,record.id)">Save Changes</button>
 
                     </div>
                 </div>
@@ -177,8 +178,10 @@
                         Are You sure Want to delete this record
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal" id='delete-close-{{i}}'>Close</button>
-                        <button type="button" class="btn btn-danger" (click)="deleteEmpData(i,record.id)">Delete</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                            id='delete-close-{{i}}'>Close</button>
+                        <button type="button" class="btn btn-danger"
+                            (click)="deleteEmpData(i,record.id)">Delete</button>
                     </div>
                 </div>
             </div>
