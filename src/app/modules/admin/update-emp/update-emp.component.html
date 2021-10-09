@@ -1,3 +1,19 @@
+<!-- Topbar Search -->
+
+<div class="row">
+    <div class="col-6">
+        <div class="input-group">
+            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                aria-label="Search" aria-describedby="basic-addon2" [(ngModel)]="nameSearch">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button">
+                    <i class="fas fa-search fa-sm"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <table class="table table-hover">
     <thead>
         <tr>
@@ -8,16 +24,16 @@
             <th scope="col">Actions</th>
         </tr>
     </thead>
-    <tbody *ngFor="let record of empRecords;index as i">
+    <tbody *ngFor="let record of empRecords | filter:nameSearch ;index as i ">
         <tr>
             <th scope="row">{{record.id}}</th>
             <td>{{i+1}}</td>
             <td>{{record.name}}</td>
             <td>{{record.email}}</td>
             <td>
-                <div class="text-center">
+                <div class="mx-auto">
                     <!-- view button -->
-                    <i class="far fa-eye  btn btn-primary my-1 mx-1 btn fa-3x" data-toggle="modal"
+                    <i class="far fa-eye  btn btn-primary   btn fa-3x" data-toggle="modal"
                         [attr.data-target]="'#viewmore-' + i"></i>
                     <!-- edit button -->
                     <i class="fas fa-edit fa-2x  btn btn-warning mx-2" data-toggle="modal"
@@ -85,7 +101,6 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-
                     </div>
                 </div>
             </div>

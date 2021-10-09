@@ -22,6 +22,7 @@ export class UpdateEmpComponent implements OnInit {
   updateForm: FormGroup
   flagMessage: boolean
   empData // put single object of employee
+  nameSearch: string=''
   constructor(private empService: EmployeeService) { }
 
   ngOnInit(): void {

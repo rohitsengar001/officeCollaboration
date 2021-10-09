@@ -7,17 +7,21 @@ import { AdminProfileComponent } from './admin-profile/admin-profile.component';
 import { AddempComponent } from './addemp/addemp.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UpdateEmpComponent } from './update-emp/update-emp.component';
+import { FilterPipe } from 'src/app/pipes/filter.pipe';
 
 
 
 @NgModule({
-  declarations: [AdminHomeComponent, AdminProfileComponent, AddempComponent, UpdateEmpComponent],
+  declarations: [AdminHomeComponent, AdminProfileComponent, AddempComponent, UpdateEmpComponent,FilterPipe],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     TodoAppModule,
     AdminRoutes,
+
+    // AppModule
+  
   ],
   exports: [AdminHomeComponent]
 })

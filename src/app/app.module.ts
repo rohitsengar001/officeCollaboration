@@ -9,6 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // import { AdminModule } from './modules/admin/admin.module';
 import { HttpClientModule } from '@angular/common/http';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+// import { FilterPipe } from './pipes/filter.pipe';
 
 
 
@@ -16,6 +17,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
   declarations: [
     AppComponent,
     PagenotfoundComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -26,6 +28,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     HttpClientModule,
     
   ],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })

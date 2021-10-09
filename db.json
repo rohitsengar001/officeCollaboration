@@ -73,6 +73,11 @@
       "content": "asdadasdad",
       "status": "",
       "id": 4
+    },
+    {
+      "content": "assignment tailorsoft",
+      "status": "",
+      "id": 5
     }
   ],
   "employee": [
@@ -87,6 +92,18 @@
       "reporting_manager": "ROHIT SENGAR",
       "allocate_project": "ANGULAR",
       "id": 1
+    },
+    {
+      "name": "rohit sengar",
+      "email": "rohitsengar001@gmail.com",
+      "password": "rohit@321",
+      "designation": [
+        "CEO"
+      ],
+      "band": "band7",
+      "reporting_manager": "myself",
+      "allocate_project": "nothing",
+      "id": 2
     }
   ],
   "profile": {
