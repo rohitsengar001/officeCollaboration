@@ -23,6 +23,7 @@ export class UpdateEmpComponent implements OnInit {
   flagMessage: boolean
   empData // put single object of employee
   nameSearch: string=''
+  checkFlag=true;
   constructor(private empService: EmployeeService) { }
 
   ngOnInit(): void {
@@ -62,7 +63,8 @@ export class UpdateEmpComponent implements OnInit {
         this.getEmployeeData()
       })
     })
-
+    
+  
     // update record 
     
 
@@ -77,5 +79,13 @@ export class UpdateEmpComponent implements OnInit {
       delBtn.click()
       this.getEmployeeData()
     })
+  }
+
+  isChecked(){
+      if(this.checkFlag==false){
+        this.checkFlag=true;
+      }else{
+        this.checkFlag=false;
+      }
   }
 }

@@ -160,7 +160,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
+                                    <input class="form-check-input" type="checkbox" (click)="isChecked()">
                                     <label class="form-check-label" for="gridCheck">
                                         Check me out
                                     </label>
@@ -171,7 +171,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-success" data-dismiss="modal"
-                            (click)="updateEmpData(updateForm,record.id)">Save Changes</button>
+                            (click)="updateEmpData(updateForm,record.id)" [disabled]="checkFlag">Save Changes</button>
 
                     </div>
                 </div>
